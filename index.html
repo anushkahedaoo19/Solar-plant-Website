@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SolarBright Energy | Home</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8fdf9;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #00796b, #26a69a);
+      transition: 0.3s ease;
+    }
+    .navbar.scrolled {
+      background: #004d40;
+    }
+    .navbar a {
+      color: #fff !important;
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      color: #ffeb3b !important;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('https://blog.feniceenergy.com/wp-content/uploads/2024/05/Solar-energy-and-job-creation.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      animation: fadeInUp 1.5s ease;
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    .hero button {
+      background-color: #ffeb3b;
+      border: none;
+      color: #333;
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border-radius: 30px;
+      margin-top: 1.5rem;
+      transition: 0.3s ease;
+    }
+    .hero button:hover {
+      background-color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* About */
+    .about-section {
+      padding: 5rem 2rem;
+    }
+    .about-section img {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .icon-box {
+      background: #e0f2f1;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .icon-box i {
+      font-size: 2rem;
+      color: #00796b;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Why Choose Us */
+    .why-us {
+      background-color: #f2f9f5;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .why-us .icon-box {
+      background: #fff;
+      transition: 0.3s;
+    }
+    .why-us .icon-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Gallery */
+    .gallery img {
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Blog */
+    .blog-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Logos */
+    .logos img {
+      height: 60px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+    .logos img:hover {
+      filter: none;
+      opacity: 1;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(90deg, #00796b, #26a69a);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .cta button {
+      background-color: #ffeb3b;
+      border: none;
+      color: #333;
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+    .cta button:hover {
+      background-color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      background: #004d40;
+      color: white;
+      padding: 3rem 1rem;
+    }
+    footer a {
+      color: #ffeb3b;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">☀️ SolarBright</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="calculator.html">Calculator</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Powering a Brighter, Greener Tomorrow</h1>
+      <p>Renewable. Reliable. Responsible.</p>
+      <button onclick="window.location.href='services.html'">Discover Our Services</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about-section container text-center">
+    <h2 class="text-success mb-4">Who We Are</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="icon-box">
+          <i class="bi bi-globe2"></i>
+          <h5>Global Impact</h5>
+          <p>Helping communities worldwide switch to sustainable energy.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-box">
+          <i class="bi bi-lightning-charge-fill"></i>
+          <h5>Clean Energy</h5>
+          <p>Innovative solar solutions designed to minimize carbon footprints.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="icon-box">
+          <i class="bi bi-people-fill"></i>
+          <h5>Community Focus</h5>
+          <p>Empowering rural areas with accessible and affordable energy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-us">
+    <div class="container">
+      <h2 class="text-success mb-5">Why Choose SolarBright?</h2>
+      <div class="row g-4">
+        <div class="col-md-3"><div class="icon-box"><i class="bi bi-check-circle"></i><h6>Certified Engineers</h6></div></div>
+        <div class="col-md-3"><div class="icon-box"><i class="bi bi-cash-stack"></i><h6>Affordable Pricing</h6></div></div>
+        <div class="col-md-3"><div class="icon-box"><i class="bi bi-speedometer2"></i><h6>Efficient Systems</h6></div></div>
+        <div class="col-md-3"><div class="icon-box"><i class="bi bi-sun-fill"></i><h6>Eco-Friendly Designs</h6></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="container my-5 text-center">
+    <h2 class="text-success mb-4">Our Projects</h2>
+    <div class="row g-3 gallery">
+      <div class="col-md-4"><img src="https://marvalpower.ie/wp-content/uploads/2024/09/marval-power-solar-energy-ireland-2-1.jpg" class="img-fluid"></div>
+      <div class="col-md-4"><img src="https://tiimg.tistatic.com/fp/1/008/043/cool-white-lighting-30-watt-solar-street-light-15-feet-pole-height-343.jpg" class="img-fluid"></div>
+      <div class="col-md-4"><img src="https://intello.co.in/wp-content/uploads/2024/07/Mask-group-98-1.webp" class="img-fluid"></div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="container my-5 text-center">
+    <h2 class="text-success mb-4">Latest News</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card blog-card">
+          <img src="https://images.unsplash.com/photo-1603565816033-12b47a7a6a8e?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="fw-bold text-success">India’s Solar Growth 2025</h5>
+            <p class="text-muted">India is leading the renewable revolution with record solar capacity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card blog-card">
+          <img src="https://images.unsplash.com/photo-1603575448365-271dcbd4b6e3?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="fw-bold text-success">Solar for Rural Empowerment</h5>
+            <p class="text-muted">Solar power helps rural communities gain self-sufficiency.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card blog-card">
+          <img src="https://images.unsplash.com/photo-1581093588401-22d813d6ba63?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="fw-bold text-success">Future of Clean Energy</h5>
+            <p class="text-muted">How solar energy is shaping a sustainable tomorrow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Logos -->
+  <section class="logos text-center py-4">
+    <div class="container">
+      <h5 class="text-success mb-4">Our Trusted Partners</h5>
+      <div class="d-flex justify-content-center flex-wrap gap-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Tata_logo.svg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Adani_Logo.svg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/ABB_logo.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Join the Solar Revolution</h2>
+    <p class="lead">Power your home or business with clean energy today.</p>
+    <button onclick="window.location.href='contact.html'">Get a Free Quote</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <h6>About Us</h6>
+          <p>SolarBright Energy is dedicated to building a sustainable world through clean energy.</p>
+        </div>
+        <div class="col-md-4">
+          <h6>Quick Links</h6>
+          <p><a href="services.html">Services</a> | <a href="calculator.html">Calculator</a> | <a href="contact.html">Contact</a></p>
+        </div>
+        <div class="col-md-4">
+          <h6>Follow Us</h6>
+          <p>
+            <i class="bi bi-facebook mx-2"></i>
+            <i class="bi bi-instagram mx-2"></i>
+            <i class="bi bi-linkedin mx-2"></i>
+          </p>
+        </div>
+      </div>
+      <p>© 2025 SolarBright Energy | Designed with ☀️ for a greener world</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar color change on scroll
+    window.addEventListener("scroll", () => {
+      const navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) navbar.classList.add("scrolled");
+      else navbar.classList.remove("scrolled");
+    });
+  </script>
+</body>
+</html>

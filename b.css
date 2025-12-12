@@ -1,0 +1,264 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #00796b, #26a69a);
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  background: #ffeb3b;
+  color: #333;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+/* About Section */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about {
+  background: #fff;
+}
+
+.about h2 {
+  color: #00796b;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Services */
+.services {
+  background: #f1f8e9;
+}
+
+.services h2 {
+  color: #00796b;
+  margin-bottom: 2rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+/* Calculator */
+.calculator {
+  background: #e0f2f1;
+  border-radius: 15px;
+  padding: 3rem;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.calculator input {
+  width: 80%;
+  padding: 0.7rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.calculator button {
+  background: #00796b;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calculator button:hover {
+  background: #004d40;
+}
+
+/* Contact Section */
+.contact {
+  background: #004d40;
+  color: #fff;
+}
+
+.contact h2 {
+  color: #ffeb3b;
+  margin-bottom: 2rem;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+}
+
+.contact button {
+  background: #ffeb3b;
+  color: #004d40;
+  font-weight: 600;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  background: white;
+}
+
+/* Footer */
+footer {
+  background: #00332d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+}
